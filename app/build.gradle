@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.rj.ardemo"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.12.0'
+    implementation "com.google.android.material:material:1.1.0-alpha06"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}
+
+
+
+sceneform.asset('Data/Earth/Earth.gltf',
+        'default',
+        'Data/Earth/Earth.sfa',
+        'src/main/assets/Earth')
+
+sceneform.asset('Data/Luna/Luna.gltf',
+        'default',
+        'Data/Luna/Luna.sfa',
+        'src/main/assets/Luna')
+
+
+
+sceneform.asset('Data/Jupiter/Jupiter.gltf',
+        'default',
+        'Data/Jupiter/Jupiter.sfa',
+        'src/main/assets/Jupiter')
+
+sceneform.asset('Data/Mars/Mars.gltf',
+        'default',
+        'Data/Mars/Mars.sfa',
+        'src/main/assets/Mars')
+
+sceneform.asset('Data/Mercury/Mercury.gltf',
+        'default',
+        'Data/Mercury/Mercury.sfa',
+        'src/main/assets/Mercury')
+
+sceneform.asset('Data/Neptune/Neptune.gltf',
+        'default',
+        'Data/Neptune/Neptune.sfa',
+        'src/main/assets/Neptune')
+
+sceneform.asset('Data/Saturn/Saturn.gltf',
+        'default',
+        'Data/Saturn/Saturn.sfa',
+        'src/main/assets/Saturn')
+
+sceneform.asset('Data/Sol/Sol.gltf',
+        'default',
+        'Data/Sol/Sol.sfa',
+        'src/main/assets/Sol')
+
+sceneform.asset('Data/Uranus/Uranus.gltf',
+        'default',
+        'Data/Uranus/Uranus.sfa',
+        'src/main/assets/Uranus')
+
+sceneform.asset('Data/Venus/Venus.gltf',
+        'default',
+        'Data/Venus/Venus.sfa',
+        'src/main/assets/Venus')
